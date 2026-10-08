@@ -106,8 +106,17 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Regional Hubs Index for Internal SEO Linking */}
+        <div className="pt-6 pb-6 border-t border-black/6 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-[#64748b]">
+          <span className="font-bold text-[#0f172a] font-mono text-[11px] uppercase">Regional Hubs:</span>
+          <Link href="/locations/delhi-ncr" className="hover:text-[#0071e3] transition-colors">Delhi NCR</Link>
+          <Link href="/locations/usa" className="hover:text-[#0071e3] transition-colors">United States (USA)</Link>
+          <Link href="/locations/uae-dubai" className="hover:text-[#0071e3] transition-colors">Dubai & UAE</Link>
+          <Link href="/locations/uk-europe" className="hover:text-[#0071e3] transition-colors">UK & Europe</Link>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-black/6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#64748b] gap-4">
+        <div className="pt-6 border-t border-black/6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#64748b] gap-4">
           <div>
             © {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved. • <em>"{COMPANY_INFO.motto}"</em>
           </div>

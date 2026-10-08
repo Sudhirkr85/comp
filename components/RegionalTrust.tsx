@@ -1,11 +1,13 @@
 "use client";
 
-import { Globe, ShieldCheck, TrendingUp, Clock, Zap, MapPin } from "lucide-react";
+import Link from "next/link";
+import { Globe, ShieldCheck, TrendingUp, Clock, Zap, MapPin, ArrowRight } from "lucide-react";
 
 export default function RegionalTrust() {
   const globalDeliveryHubs = [
     {
       region: "North America",
+      locationSlug: "usa",
       countries: "United States & Canada",
       cities: "New York • San Francisco • Toronto",
       focus: "Enterprise SaaS, Scalable Web Apps & Cloud Systems",
@@ -14,6 +16,7 @@ export default function RegionalTrust() {
     },
     {
       region: "United Kingdom & Europe",
+      locationSlug: "uk-europe",
       countries: "UK & Western Europe",
       cities: "London • Manchester • Berlin",
       focus: "Corporate Portals, High-Conversion UX & Global SEO",
@@ -22,6 +25,7 @@ export default function RegionalTrust() {
     },
     {
       region: "Middle East & GCC",
+      locationSlug: "uae-dubai",
       countries: "United Arab Emirates & Saudi Arabia",
       cities: "Dubai • Abu Dhabi • Riyadh",
       focus: "E-Commerce, Real Estate & 24/7 AI Automation",
@@ -30,6 +34,7 @@ export default function RegionalTrust() {
     },
     {
       region: "Pan-India & Asia-Pacific",
+      locationSlug: "delhi-ncr",
       countries: "India & APAC Tech Centers",
       cities: "Delhi NCR • Mumbai • Bengaluru & Nationwide",
       focus: "Full-Cycle Engineering, Legacy Modernization & AMC",
@@ -82,9 +87,18 @@ export default function RegionalTrust() {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-black/6 flex items-center gap-1.5 text-[11px] font-mono text-emerald-700 font-bold">
-                <Clock className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                <span>{hub.timezone}</span>
+              <div className="pt-4 border-t border-black/6 space-y-2.5">
+                <div className="flex items-center gap-1.5 text-[11px] font-mono text-emerald-700 font-bold">
+                  <Clock className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                  <span>{hub.timezone}</span>
+                </div>
+                <Link
+                  href={`/locations/${hub.locationSlug}`}
+                  className="inline-flex items-center justify-between w-full text-xs font-bold text-[#0071e3] hover:text-[#005bb5] transition-colors pt-1 group/link"
+                >
+                  <span>Explore {hub.region}</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" />
+                </Link>
               </div>
             </div>
           ))}

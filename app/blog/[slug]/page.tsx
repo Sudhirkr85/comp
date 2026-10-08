@@ -169,12 +169,65 @@ export default async function BlogPostPage({ params }: Props) {
             if (trimmed.startsWith('### ')) {
               return <h3 key={index} className="text-xl font-bold text-[#1d1d1f] pt-2">{trimmed.replace('### ', '')}</h3>;
             }
-            return <p key={index} className="text-[#515154] leading-relaxed">{trimmed}</p>;
+            
+            // Parse [text](url) links
+            const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+            const parts: (string | React.ReactNode)[] = [];
+            let lastIndex = 0;
+            let match;
+
+            while ((match = linkRegex.exec(trimmed)) !== null) {
+              if (match.index > lastIndex) {
+                parts.push(trimmed.substring(lastIndex, match.index));
+              }
+              const [, label, href] = match;
+              parts.push(
+                <Link
+                  key={match.index}
+                  href={href}
+                  className="font-semibold text-[#0071e3] underline underline-offset-4 hover:text-[#005bb5] transition-colors"
+                >
+                  {label}
+                </Link>
+              );
+              lastIndex = linkRegex.lastIndex;
+            }
+
+            if (lastIndex < trimmed.length) {
+              parts.push(trimmed.substring(lastIndex));
+            }
+
+            return <p key={index} className="text-[#515154] leading-relaxed">{parts.length > 0 ? parts : trimmed}</p>;
           })}
         </div>
 
+        {/* Featured Related Service Bento Callout (SEO Link Equity Pass) */}
+        {post.relatedService && (
+          <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-blue-50/70 via-white to-indigo-50/50 border border-blue-200/80 shadow-xs">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <span className="inline-block text-[11px] font-mono font-bold uppercase tracking-wider text-[#0071e3] bg-blue-100/70 px-2.5 py-0.5 rounded-full mb-2">
+                  {post.relatedService.badge}
+                </span>
+                <h4 className="text-lg font-bold text-[#1d1d1f]">
+                  {post.relatedService.title}
+                </h4>
+                <p className="text-xs text-[#64748b] mt-1 max-w-xl">
+                  {post.relatedService.description}
+                </p>
+              </div>
+              <Link
+                href={`/services/${post.relatedService.id}`}
+                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#0071e3] text-white text-xs font-bold hover:bg-[#005bb5] transition-all shrink-0 self-start sm:self-auto shadow-sm"
+              >
+                Explore Service <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+        )}
+
         {/* Tags */}
-        <div className="mt-12 pt-6 border-t border-black/5 flex flex-wrap items-center gap-2">
+        <div className="mt-10 pt-6 border-t border-black/5 flex flex-wrap items-center gap-2">
           <span className="text-xs text-[#86868b] font-mono mr-2">Topic Tags:</span>
           {post.tags.map((tag, i) => (
             <span key={i} className="text-xs font-mono px-3 py-1 rounded-md bg-[#f5f5f7] text-[#1d1d1f]">
@@ -184,7 +237,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         {/* Call to Action Box */}
-        <div className="mt-16 rounded-3xl bg-[#000000] text-white p-8 sm:p-10 text-center shadow-xl">
+        <div className="mt-14 rounded-3xl bg-[#000000] text-white p-8 sm:p-10 text-center shadow-xl">
           <h3 className="text-2xl font-bold mb-2">Need a custom AI or Web solution for your company?</h3>
           <p className="text-gray-400 text-sm mb-6 max-w-md mx-auto">
             Book a free 15-minute technical discovery call with our Solutions Architect.
