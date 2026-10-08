@@ -32,6 +32,13 @@ export default function AgencyComparisonTable() {
       saHighlight: true,
     },
     {
+      feature: "Engineering vs. Blind AI Prompts",
+      sa: "Handcrafted Architecture & TypeScript (Zero Blind Prompts)",
+      freelancer: "Blind AI copy-paste with unfixable bugs",
+      agency: "Outdated templates & heavy code bloat",
+      saHighlight: true,
+    },
+    {
       feature: "100% IP & Source Code Handover",
       sa: "Full GitHub Access + Signed NDA",
       freelancer: "Holds code on personal computer",

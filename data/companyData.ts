@@ -184,6 +184,10 @@ export const WHY_US_DATA = [
     description: "Whether creating a brand-new website from scratch or taking over an existing slow, buggy legacy site, we deliver 99/100 Google PageSpeed and modern Apple aesthetics."
   },
   {
+    title: "🚫 Zero Blind Prompts. True Software Engineering",
+    description: "We don't copy-paste generic AI prompts that create buggy, unmaintainable spaghetti code. Every line of TypeScript, database schema, and API route is custom-engineered for enterprise stability."
+  },
+  {
     title: "🌍 Pan-India & Global #1 SEO Dominance",
     description: "Engineered to rank at the top of Google search across Hindi-belt states (Delhi NCR, UP, Bihar, MP) and international global markets (USA, UK, UAE)."
   },
@@ -198,6 +202,10 @@ export const WHY_US_DATA = [
 ];
 
 export const FAQ_DATA: FAQItem[] = [
+  {
+    question: "Do you build websites using blind AI prompts or generic generators?",
+    answer: "Never. Amateurs use single-prompt AI generators that produce brittle, buggy spaghetti code that breaks on production. At SA Software Innovation, we practice disciplined software engineering: custom technical blueprints, strict TypeScript typing, optimized database schemas, and Apple-grade UI/UX standards. AI accelerates our velocity, but senior human architecture guarantees production-grade reliability."
+  },
   {
     question: "Do you take over, manage, and fix existing / old websites?",
     answer: "Yes, absolutely! We specialize in legacy website handling. We conduct a complete code and performance audit, fix existing bugs, overhaul slow 15-20 second loading speeds down to sub-1 second, and provide ongoing monthly Website AMC to keep your site updated, secure, and running 24/7 with a 99.9% uptime SLA."
