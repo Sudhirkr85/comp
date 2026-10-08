@@ -102,7 +102,7 @@ export default function ContactForm() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-xs text-[#94a3b8] uppercase font-mono font-semibold">Service Coverage</div>
+                  <div className="text-xs text-[#94a3b8] uppercase font-mono font-semibold">Office Location</div>
                   <span className="text-sm font-semibold">{COMPANY_INFO.address}</span>
                 </div>
               </div>

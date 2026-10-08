@@ -90,15 +90,25 @@ export default function RootLayout({
         "image": "https://sasoftwareinnovation.com/logo.svg",
         "address": {
           "@type": "PostalAddress",
-          "addressCountry": "IN",
-          "addressRegion": "Delhi NCR / Uttar Pradesh / Bihar / MP"
+          "streetAddress": "M-24, Ground Floor, Near SBI Bank, Old DLF Colony, Sector 14",
+          "addressLocality": "Gurugram",
+          "addressRegion": "Haryana",
+          "postalCode": "122001",
+          "addressCountry": "IN"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "48",
+          "bestRating": "5"
         },
         "areaServed": [
+          { "@type": "City", "name": "Gurugram" },
           { "@type": "State", "name": "Delhi" },
+          { "@type": "State", "name": "Haryana" },
           { "@type": "State", "name": "Uttar Pradesh" },
           { "@type": "State", "name": "Bihar" },
           { "@type": "State", "name": "Madhya Pradesh" },
-          { "@type": "State", "name": "Rajasthan" },
           { "@type": "Country", "name": "India" },
           { "@type": "Country", "name": "United States" }
         ],
