@@ -2,10 +2,12 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TechMarquee from "@/components/TechMarquee";
 import CoreOfferings from "@/components/CoreOfferings";
+import ModernizationComparison from "@/components/ModernizationComparison";
 import AuditTool from "@/components/AuditTool";
 import RegionalTrust from "@/components/RegionalTrust";
 import Services from "@/components/Services";
 import DevelopmentProcess from "@/components/DevelopmentProcess";
+import AgencyComparisonTable from "@/components/AgencyComparisonTable";
 import Portfolio from "@/components/Portfolio";
 import WhyUs from "@/components/WhyUs";
 import ContactForm from "@/components/ContactForm";
@@ -26,28 +28,34 @@ export default function Home() {
       {/* 3. Apple White Bento Box Core Offerings: New Builds, Modernization, Global SEO, AI */}
       <CoreOfferings />
 
-      {/* 4. Instant 60-Second Website Speed & SEO Audit Tool */}
+      {/* 4. Interactive Before vs After Modernization Overhaul Matrix */}
+      <ModernizationComparison />
+
+      {/* 5. Instant 60-Second Website Speed & SEO Audit Tool */}
       <AuditTool />
 
-      {/* 5. Regional & Global Trust: Targets Delhi NCR, UP, Bihar, MP & International Markets */}
+      {/* 6. Regional & Global Trust: Targets Delhi NCR, UP, Bihar, MP & International Markets */}
       <RegionalTrust />
 
-      {/* 6. Complete Services Matrix (6 Capabilities) */}
+      {/* 7. Complete Services Matrix (6 Capabilities) */}
       <Services />
 
-      {/* 7. Enterprise Engineering Workflow & Delivery Methodology */}
+      {/* 8. Enterprise Engineering Workflow & Delivery Methodology */}
       <DevelopmentProcess />
 
-      {/* 8. Proven Client Results & Case Studies */}
+      {/* 9. Direct Transparency Comparison: SA Innovation vs Freelancers vs Traditional Agencies */}
+      <AgencyComparisonTable />
+
+      {/* 10. Proven Client Results & Case Studies */}
       <Portfolio />
 
-      {/* 9. Why Founders Choose SA Software Innovation & FAQs */}
+      {/* 11. Why Founders Choose SA Software Innovation & FAQs */}
       <WhyUs />
 
-      {/* 10. Direct Lead Capture Contact Form + Instant WhatsApp option */}
+      {/* 12. Direct Lead Capture Contact Form + Instant WhatsApp option */}
       <ContactForm />
 
-      {/* 11. Apple Glass Floating Dynamic Island Contact Pill */}
+      {/* 13. Apple Glass Floating Dynamic Island Contact Pill */}
       <FloatingContactDock />
 
       <Footer />
