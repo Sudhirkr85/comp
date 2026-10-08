@@ -7,25 +7,57 @@ import { COMPANY_INFO } from "@/data/companyData";
 
 export const metadata: Metadata = {
   title: `About Us — ${COMPANY_INFO.name}`,
-  description: "Learn about Sudhir Technologies. We are an AI & custom software engineering agency helping startups and enterprise leaders launch high-performance web applications and intelligent automation.",
+  description: `Learn about ${COMPANY_INFO.name}. We engineer high-performance web applications, legacy website modernizations, cross-border Google SEO, and intelligent AI automation for startups and enterprises worldwide.`,
+  alternates: {
+    canonical: "https://sasoftwareinnovation.com/about",
+  },
   openGraph: {
     title: `About Us — ${COMPANY_INFO.name}`,
-    description: "Our mission, engineering culture, and startup speed approach.",
-    url: "https://sudhirtech.com/about",
+    description: "Our engineering culture, legacy modernization expertise, and startup speed delivery.",
+    url: "https://sasoftwareinnovation.com/about",
   },
 };
 
 export default function AboutPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": `About ${COMPANY_INFO.name}`,
-    "description": COMPANY_INFO.tagline,
-    "publisher": {
-      "@type": "Organization",
-      "name": COMPANY_INFO.name,
-      "url": "https://sudhirtech.com"
-    }
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://sasoftwareinnovation.com/about#webpage",
+        "url": "https://sasoftwareinnovation.com/about",
+        "name": `About ${COMPANY_INFO.name}`,
+        "description": COMPANY_INFO.tagline,
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://sasoftwareinnovation.com/#website",
+          "name": COMPANY_INFO.name,
+          "url": "https://sasoftwareinnovation.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": COMPANY_INFO.name,
+          "url": "https://sasoftwareinnovation.com"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://sasoftwareinnovation.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Us",
+            "item": "https://sasoftwareinnovation.com/about"
+          }
+        ]
+      }
+    ]
   };
 
   return (
@@ -54,7 +86,7 @@ export default function AboutPage() {
             Engineering Software at Startup Speed
           </h1>
           <p className="text-lg sm:text-xl text-[#86868b] leading-relaxed max-w-3xl mx-auto font-normal">
-            Sudhir Technologies was founded by software engineers to solve a major industry problem: traditional software agencies are too slow, overly expensive, and detached from modern AI capabilities.
+            {COMPANY_INFO.name} was founded by software engineers to solve a major industry problem: traditional software agencies are too slow, overly expensive, and detached from modern AI and Next.js capabilities.
           </p>
         </div>
       </section>

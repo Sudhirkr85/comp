@@ -42,15 +42,15 @@ const INDUSTRY_PREVIEWS = [
   },
   {
     id: "seo",
-    name: "Pan-India & Global SEO",
+    name: "Cross-Border & Global SEO",
     icon: TrendingUp,
     badge: "#1 Google Search Rankings",
-    headline: "Dominate Search Results in India (Delhi, UP, Bihar, MP) & Global Markets",
+    headline: "Dominate Search Results Across India, North America, UK & Middle East",
     leadsStat: "+480% Organic Leads",
     speedStat: "Top Google Ranking",
-    features: ["Local SEO (Google Maps & Business Profile)", "Global Technical SEO (USA, UK, UAE, Canada)", "Structured Schema.org Architecture", "High-Intent Keyword Conversion Funnel"],
+    features: ["Cross-Border Technical SEO (USA, UK, UAE, Canada)", "Enterprise Multi-Region Schema.org", "Targeted High-Intent Keyword Funnels", "Core Web Vitals Ranking Compliance"],
     previewUrl: "marketleader.global",
-    recentLead: "Ranked #1 on Google for high-intent queries (Lucknow & Texas)",
+    recentLead: "Ranked #1 on Google for high-intent buyer queries (US, UK & India)",
     sampleCta: "Get Free SEO Audit"
   },
   {
@@ -63,7 +63,7 @@ const INDUSTRY_PREVIEWS = [
     speedStat: "Zero Hallucination",
     features: ["24/7 WhatsApp Auto-Reply Chatbots", "Internal Document & Knowledge Search AI", "Automated Lead Qualification Pipeline", "Custom CRM & Workflow Synchronization"],
     previewUrl: "smartassist.ai",
-    recentLead: "Automated 620+ inquiries without human delay (Patna & Dubai)",
+    recentLead: "Automated 1,200+ qualified inquiries with zero delay (Dubai, London & India)",
     sampleCta: "Deploy AI Automation"
   },
   {

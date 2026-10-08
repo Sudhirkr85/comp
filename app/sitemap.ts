@@ -46,17 +46,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...serviceUrls,
     ...blogUrls,
-    {
-      url: `${baseUrl}/#estimator`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#portfolio`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
   ];
 }

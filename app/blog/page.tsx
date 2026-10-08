@@ -8,17 +8,60 @@ import { COMPANY_INFO } from "@/data/companyData";
 
 export const metadata: Metadata = {
   title: `Tech Insights & Engineering Blog | ${COMPANY_INFO.name}`,
-  description: "Read technical articles on AI RAG pipelines, Next.js SaaS development, mobile frameworks, and cloud architecture by Sudhir Technologies engineers.",
+  description: `Read technical articles on AI RAG pipelines, Next.js web performance, mobile engineering, and cloud architecture by ${COMPANY_INFO.name} engineers.`,
+  alternates: {
+    canonical: "https://sasoftwareinnovation.com/blog",
+  },
   openGraph: {
     title: `Tech Insights & Blog — ${COMPANY_INFO.name}`,
     description: "In-depth engineering guides, AI architecture breakdowns, and SaaS MVP strategies.",
-    url: "https://sudhirtech.com/blog",
+    url: "https://sasoftwareinnovation.com/blog",
   },
 };
 
 export default function BlogListingPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://sasoftwareinnovation.com/blog#webpage",
+        "url": "https://sasoftwareinnovation.com/blog",
+        "name": `Tech Insights & Engineering Blog — ${COMPANY_INFO.name}`,
+        "description": "In-depth engineering guides, AI architecture breakdowns, and SaaS MVP strategies.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://sasoftwareinnovation.com/#website",
+          "name": COMPANY_INFO.name,
+          "url": "https://sasoftwareinnovation.com"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://sasoftwareinnovation.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://sasoftwareinnovation.com/blog"
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen bg-[#fbfbfd] text-[#1d1d1f] relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       {/* Hero Section */}

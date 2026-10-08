@@ -30,10 +30,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${service.title} | ${COMPANY_INFO.name}`,
     description: service.description,
     keywords: [service.title, ...service.techBadge, COMPANY_INFO.name, "Software Development"],
+    alternates: {
+      canonical: `https://sasoftwareinnovation.com/services/${service.id}`,
+    },
     openGraph: {
       title: `${service.title} — ${COMPANY_INFO.name}`,
       description: service.description,
-      url: `https://sudhirtech.com/services/${service.id}`,
+      url: `https://sasoftwareinnovation.com/services/${service.id}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${service.title} — ${COMPANY_INFO.name}`,
+      description: service.description,
     },
   };
 }
@@ -63,19 +71,62 @@ export default async function ServiceDetailPage({ params }: Props) {
     }
   };
 
-  // Service Specific JSON-LD Schema
+  // Service Specific JSON-LD Schema with Breadcrumb
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": service.title,
-    "description": service.description,
-    "provider": {
-      "@type": "Organization",
-      "name": COMPANY_INFO.name,
-      "url": "https://sudhirtech.com"
-    },
-    "areaServed": "Worldwide",
-    "termsOfService": "https://sudhirtech.com/terms"
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": `https://sasoftwareinnovation.com/services/${service.id}#service`,
+        "name": service.title,
+        "description": service.description,
+        "provider": {
+          "@type": "Organization",
+          "name": COMPANY_INFO.name,
+          "url": "https://sasoftwareinnovation.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://sasoftwareinnovation.com/logo.svg"
+          }
+        },
+        "areaServed": [
+          "India",
+          "United States",
+          "United Kingdom",
+          "United Arab Emirates",
+          "Canada"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": "Custom Scope",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://sasoftwareinnovation.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://sasoftwareinnovation.com/#services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": service.title,
+            "item": `https://sasoftwareinnovation.com/services/${service.id}`
+          }
+        ]
+      }
+    ]
   };
 
   return (

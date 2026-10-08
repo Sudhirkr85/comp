@@ -35,7 +35,7 @@ export const COMPANY_INFO = {
   phone: "+91 9102130956",
   rawPhone: "9102130956",
   whatsappNumber: "919102130956",
-  address: "Innovation Tech Hub • Serving Delhi NCR, UP, Bihar, MP & Pan-India",
+  address: "Global Delivery Hubs • Serving North America, Europe, UAE & Pan-India",
   ndaGuaranteed: true,
   mvpDeliveryTime: "2-4 Weeks",
 };
@@ -59,15 +59,15 @@ export const SERVICES_DATA: ServiceItem[] = [
   },
   {
     id: "seo-dominance",
-    title: "Search Engine Dominance (India & Global SEO)",
+    title: "Search Engine Dominance (Cross-Border & Global SEO)",
     category: "web",
-    description: "Rank #1 on Google for high-intent search queries across Hindi-belt states (Delhi NCR, UP, Bihar, MP) and global international markets (USA, UK, UAE).",
+    description: "Rank #1 on Google for high-intent search queries across North America, the UK, the Middle East, and Pan-India enterprise markets.",
     iconName: "TrendingUp",
     features: [
-      "Hyper-Local SEO (Google Business Profile & Map Pack)",
-      "International / Global Technical SEO Architecture",
-      "Schema.org Structured Data & Hreflang Tags",
-      "High-Conversion Keyword Mapping & Organic Inquiries"
+      "Cross-Border Technical SEO (USA, UK, UAE, Canada & India)",
+      "Enterprise Multi-Region Hreflang & Schema.org Tags",
+      "Sub-Second Core Web Vitals (<0.8s) Google Compliance",
+      "High-Intent Commercial Keyword Funnels & Inquiries"
     ],
     techBadge: ["Technical SEO", "Schema.org", "Core Web Vitals", "Global Hreflang", "Search Console"],
     pricingModel: "Search Dominance Retainer",
@@ -151,9 +151,9 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
   },
   {
     id: "global-seo-dominance",
-    title: "Zenith Global Exports — Pan-India & US SEO",
+    title: "Zenith Global Exports — Cross-Border SEO",
     clientCategory: "Search Engine Dominance",
-    description: "Targeted competitive export keywords across Delhi NCR, UP, and global buyers in USA and UAE. Ranked on Page 1 within 60 days.",
+    description: "Targeted competitive export keywords for enterprise buyers in the United States, UK, UAE, and India. Ranked on Google Page 1 within 60 days.",
     impactMetrics: "#1 Google Search Rank • +410% International Inquiries",
     techStack: ["Technical SEO", "Schema.org", "Hreflang", "Core Web Vitals"],
     imageGradient: "from-emerald-600/30 via-teal-600/20 to-slate-950"
@@ -188,8 +188,8 @@ export const WHY_US_DATA = [
     description: "We don't copy-paste generic AI prompts that create buggy, unmaintainable spaghetti code. Every line of TypeScript, database schema, and API route is custom-engineered for enterprise stability."
   },
   {
-    title: "🌍 Pan-India & Global #1 SEO Dominance",
-    description: "Engineered to rank at the top of Google search across Hindi-belt states (Delhi NCR, UP, Bihar, MP) and international global markets (USA, UK, UAE)."
+    title: "🌍 Cross-Border & Global #1 SEO Dominance",
+    description: "Engineered to rank at the top of Google search across North America, Europe, the Middle East, and Pan-India enterprise markets."
   },
   {
     title: "🤖 24/7 AI Automation & WhatsApp Bots",
@@ -211,8 +211,8 @@ export const FAQ_DATA: FAQItem[] = [
     answer: "Yes, absolutely! We specialize in legacy website handling. We conduct a complete code and performance audit, fix existing bugs, overhaul slow 15-20 second loading speeds down to sub-1 second, and provide ongoing monthly Website AMC to keep your site updated, secure, and running 24/7 with a 99.9% uptime SLA."
   },
   {
-    question: "How does your Pan-India and Global SEO process rank my business #1 on Google?",
-    answer: "We engineer SEO into the code itself: perfect Schema.org structured data, geo-targeted location metadata for Indian regions (Delhi NCR, UP, Bihar, MP, Rajasthan), multi-region hreflang architecture for international markets (USA, UK, UAE), and 99/100 Core Web Vitals speed scores that Google algorithms prioritize for top ranking."
+    question: "How does your Cross-Border & Global SEO rank my business #1 on Google?",
+    answer: "We engineer SEO into the code itself: perfect Schema.org structured data, multi-region hreflang architecture for global international markets (USA, UK, UAE, Canada), localized metadata for Indian enterprise hubs, and 99/100 Core Web Vitals speed scores that Google algorithms prioritize for top ranking."
   },
   {
     question: "Can you connect a 24/7 AI WhatsApp bot to our website and business?",

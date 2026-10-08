@@ -20,25 +20,22 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL("https://sasoftwareinnovation.com"),
   title: {
-    default: "SA Software Innovation — Best Website & Mobile App Development Company in India | Delhi NCR, UP, Bihar, MP",
+    default: "SA Software Innovation — Global Web Engineering, Legacy Modernization & Cross-Border SEO",
     template: "%s | SA Software Innovation"
   },
-  description: "Looking for top website development or mobile app company? SA Software Innovation delivers custom business websites, Android/iOS apps, ecommerce portals, and AI solutions in 2-4 weeks. Best software company serving Delhi, UP, Bihar, MP, Rajasthan & across India.",
+  description: "SA Software Innovation engineers high-impact enterprise websites, legacy codebase speed overhauls (20s to <1s), cross-border Google SEO dominance, 24/7 AI automation, and dedicated Website AMC across North America, Europe, UAE, and India.",
   keywords: [
-    "best website development company in Delhi",
-    "top website designing company in Noida",
-    "mobile app development company in Lucknow",
-    "best software company in Patna Bihar",
-    "software company in Indore MP",
-    "website developer in Jaipur",
-    "custom software development company India",
-    "enterprise website development India",
-    "business website developer near me",
-    "Android app development company in UP",
-    "ecommerce website development company",
-    "startup MVP development agency India",
-    "SA Software Innovation",
-    "software innovation company"
+    "global web engineering agency",
+    "legacy website modernization",
+    "website speed optimization core web vitals",
+    "cross-border SEO agency",
+    "international SEO company USA UK UAE",
+    "website AMC and maintenance services",
+    "enterprise Next.js development company",
+    "custom AI WhatsApp automation agency",
+    "mobile app engineering Flutter iOS Android",
+    "software development agency India USA UAE",
+    "SA Software Innovation"
   ],
   authors: [{ name: COMPANY_INFO.name }],
   creator: COMPANY_INFO.name,
@@ -54,12 +51,15 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  alternates: {
+    canonical: "https://sasoftwareinnovation.com",
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://sasoftwareinnovation.com",
-    title: "Best Website & Mobile App Development Company in India — SA Software Innovation",
-    description: "Launch your custom business website or mobile app in 2-4 weeks. Fast delivery, enterprise architecture, 100% code ownership. Serving Delhi NCR, UP, Bihar, MP and pan-India.",
+    title: "SA Software Innovation — Global Web Engineering, Modernization & Cross-Border SEO",
+    description: "Launch your custom business website or mobile app in 2-4 weeks. Enterprise architecture, legacy speed overhauls, 100% code ownership. Serving North America, Europe, UAE, and India.",
     siteName: "SA Software Innovation",
   },
   twitter: {

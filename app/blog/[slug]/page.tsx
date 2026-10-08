@@ -29,13 +29,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${post.title} | ${COMPANY_INFO.name} Blog`,
     description: post.excerpt,
     keywords: [...post.tags, COMPANY_INFO.name, "Tech Blog", "Software Engineering"],
+    alternates: {
+      canonical: `https://sasoftwareinnovation.com/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
       publishedTime: post.publishedDate,
       authors: [post.author],
-      url: `https://sudhirtech.com/blog/${post.slug}`,
+      url: `https://sasoftwareinnovation.com/blog/${post.slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
     },
   };
 }
@@ -48,24 +56,56 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  // JSON-LD Article Schema for Google Search
+  // JSON-LD Article & Breadcrumb Schema for Google Search
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": post.title,
-    "description": post.excerpt,
-    "author": {
-      "@type": "Organization",
-      "name": COMPANY_INFO.name,
-      "url": "https://sudhirtech.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": COMPANY_INFO.name,
-      "url": "https://sudhirtech.com"
-    },
-    "datePublished": post.publishedDate,
-    "mainEntityOfPage": `https://sudhirtech.com/blog/${post.slug}`
+    "@graph": [
+      {
+        "@type": "TechArticle",
+        "@id": `https://sasoftwareinnovation.com/blog/${post.slug}#article`,
+        "headline": post.title,
+        "description": post.excerpt,
+        "author": {
+          "@type": "Organization",
+          "name": COMPANY_INFO.name,
+          "url": "https://sasoftwareinnovation.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": COMPANY_INFO.name,
+          "url": "https://sasoftwareinnovation.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://sasoftwareinnovation.com/logo.svg"
+          }
+        },
+        "datePublished": post.publishedDate,
+        "mainEntityOfPage": `https://sasoftwareinnovation.com/blog/${post.slug}`
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://sasoftwareinnovation.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://sasoftwareinnovation.com/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": post.title,
+            "item": `https://sasoftwareinnovation.com/blog/${post.slug}`
+          }
+        ]
+      }
+    ]
   };
 
   return (
