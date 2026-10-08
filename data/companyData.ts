@@ -31,7 +31,7 @@ export const COMPANY_INFO = {
   motto: "Strive and Achieve",
   tagline: "Strive and Achieve — High-Performance Websites & Complete Software Solutions",
   establishedYear: "2025",
-  contactEmail: "sasofwareinnovation@gmail.com",
+  contactEmail: "sasoftwareinnovation@gmail.com",
   phone: "+91 9102130956",
   rawPhone: "9102130956",
   whatsappNumber: "919102130956",
