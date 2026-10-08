@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  --font-heading: var(--font-outfit), var(--font-jakarta), "SF Pro Display", sans-serif;
+}
+
+@layer base {
+  :root {
+    --bg-main: #f5f5f7;
+    --bg-surface: #ffffff;
+    --border-subtle: rgba(0, 0, 0, 0.08);
+    --border-hover: rgba(0, 113, 227, 0.4);
+    --text-primary: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --apple-blue: #0071e3;
+    --apple-blue-hover: #0077ed;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "SF Pro Text", -apple-system, system-ui, sans-serif;
+    letter-spacing: -0.015em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "SF Pro Text", -apple-system, system-ui, sans-serif;
+    overflow-x: hidden;
+    selection-background-color: #0071e3;
+    selection-color: #ffffff;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-outfit), var(--font-jakarta), "SF Pro Display", sans-serif;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+  }
+}
+
+/* Apple Smooth Animations */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
+}
+
+@keyframes pulseGlowRing {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 14px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+@keyframes laserShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes appleLightSweep {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(250%) rotate(25deg); }
+}
+
+/* Floating Action Classes */
+.animate-float-gentle {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.pulse-ring-emerald {
+  animation: pulseGlowRing 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Apple Pure White Ceramic Glass Navbar */
+.apple-glass {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Apple Glass Floating Island Pill */
+.apple-glass-dock {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(30px) saturate(190%);
+  -webkit-backdrop-filter: blur(30px) saturate(190%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+}
+
+/* Apple Bento Cards with Next-Gen Hover Interactions */
+.apple-bento-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 28px;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.apple-bento-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 113, 227, 0.35);
+  box-shadow: 0 24px 48px -12px rgba(0, 113, 227, 0.12), 0 0 0 1px rgba(0, 113, 227, 0.15);
+}
+
+/* Apple Card Glare Shine on Hover */
+.apple-bento-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.6) 50%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  transform: rotate(25deg);
+}
+
+.apple-bento-card:hover::after {
+  opacity: 1;
+  animation: appleLightSweep 1.2s ease forwards;
+}
+
+/* Floating Animated Shimmer Laser Card */
+.laser-shimmer-card {
+  position: relative;
+  background: #ffffff;
+}
+
+.laser-shimmer-card::before {
+  content: "";
+  position: absolute;
+  inset: -1.5px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(90deg, #0071e3, #10b981, #6366f1, #0071e3);
+  background-size: 300% 300%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: laserShimmer 6s ease infinite;
+  pointer-events: none;
+}
+
+/* Apple Icon Pods - Micro Tilt & Shadow Pop */
+.apple-icon-pod {
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.apple-bento-card:hover .apple-icon-pod {
+  transform: scale(1.1) rotate(2deg);
+  border-color: rgba(0, 113, 227, 0.4);
+  box-shadow: 0 12px 28px -4px rgba(0, 113, 227, 0.25), inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* Typography Gradient */
+.apple-blue-gradient {
+  background: linear-gradient(135deg, #0071e3 0%, #2563eb 50%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Apple Primary Pill Buttons */
+.apple-btn-black {
+  background-color: #0f172a;
+  color: #ffffff;
+  border-radius: 980px;
+  font-weight: 700;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.apple-btn-black:hover {
+  background-color: #000000;
+  transform: scale(1.03);
+  box-shadow: 0 10px 28px -4px rgba(15, 23, 42, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
