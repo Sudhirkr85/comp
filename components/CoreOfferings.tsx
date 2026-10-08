@@ -1,67 +1,87 @@
 import Link from "next/link";
-import { Globe, Smartphone, Code2, ArrowRight, CheckCircle2, Sparkles, TrendingUp, Zap, ShieldCheck } from "lucide-react";
+import { Globe, Smartphone, Code2, ArrowRight, CheckCircle2, Sparkles, TrendingUp, Zap, ShieldCheck, Bot, Wrench, Cloud } from "lucide-react";
 
 export default function CoreOfferings() {
-  const offerings = [
+  const primaryOfferings = [
     {
       id: "web-dev",
-      title: "Business & Enterprise Websites",
-      subtitle: "Our Primary Specialty",
-      badge: "Flagship Engineering",
+      title: "New Websites & Legacy Modernization",
+      subtitle: "Flagship Web Engineering",
+      badge: "Core Specialty",
       highlight: true,
       icon: <Globe className="w-8 h-8 text-[#0071e3]" />,
       iconPodBg: "bg-blue-50 border-blue-200/60",
-      description: "Custom-crafted, ultra-fast websites engineered to rank #1 on Google searches and convert visitors into high-value inquiries.",
+      description: "We architect brand-new high-converting websites and completely overhaul old, slow, or broken legacy websites into ultra-fast digital assets.",
       points: [
-        "Tailored Technical Architecture & Responsive Design",
-        "Direct 1-Click WhatsApp & Phone Lead Triggers",
-        "Top Google Local SEO (Delhi NCR, UP, Bihar, MP)",
-        "5 to 10 Days Delivery with Zero Hosting Management Hassle",
+        "Speed Overhaul: Slashes load times from 20s to sub-1s (99/100 Core Web Vitals)",
+        "Apple-grade conversion-focused UI/UX with seamless responsive design",
+        "Legacy bug fixing, broken code repair, and modern technology upgrades",
+        "Prominent 1-Click WhatsApp and direct phone lead triggers",
       ],
       link: "/services/web-saas",
       delivery: "5-10 Days Delivery",
-      capabilityNote: "High-Performance Core Web Vitals",
+      capabilityNote: "99/100 Google PageSpeed SLA",
       metric: "3.8x More Inquiries",
     },
     {
-      id: "app-dev",
-      title: "Mobile App Engineering",
-      subtitle: "iOS & Android",
-      badge: "Cross-Platform Power",
+      id: "seo-dominance",
+      title: "Search Engine Dominance (India & Global)",
+      subtitle: "Top Google Rankings",
+      badge: "Organic Growth",
       highlight: false,
-      icon: <Smartphone className="w-8 h-8 text-emerald-600" />,
+      icon: <TrendingUp className="w-8 h-8 text-emerald-600" />,
       iconPodBg: "bg-emerald-50 border-emerald-200/60",
-      description: "High-performance cross-platform mobile apps for startups and enterprises with fluid animations and secure cloud backends.",
+      description: "Engineered to rank at the top of Google search across Hindi-belt states and international global markets to drive high-intent commercial buyers.",
       points: [
-        "Google Play Store & Apple App Store Ready Setup",
-        "Payment Gateways (UPI, Razorpay, Cards) & OTP Login",
-        "Fast Offline Mode & Real-Time Push Notifications",
-        "Pixel-Perfect Apple Interface & Fluid 60fps Animations",
+        "Regional SEO: Delhi NCR, Uttar Pradesh, Bihar, Madhya Pradesh, Rajasthan",
+        "Global SEO: Structured architecture for USA, UK, UAE & overseas markets",
+        "Schema.org rich snippets, Google Map Pack dominance & local citations",
+        "Sub-second page speeds directly aligned with Google ranking algorithm",
       ],
-      link: "/services/mobile-apps",
-      delivery: "2-4 Weeks Delivery",
-      capabilityNote: "Scalable Microservices Backend",
-      metric: "100% Native Speed",
+      link: "/services/seo-dominance",
+      delivery: "Continuous / Sprint",
+      capabilityNote: "Top #1 Google Positions",
+      metric: "+410% Organic Reach",
     },
     {
-      id: "full-software",
-      title: "Full-Cycle Software & AI",
-      subtitle: "Custom Automation",
-      badge: "Enterprise Suite",
+      id: "ai-whatsapp",
+      title: "24/7 AI Automation & WhatsApp Bots",
+      subtitle: "Autonomous Lead Capture",
+      badge: "Next-Gen AI",
       highlight: false,
-      icon: <Code2 className="w-8 h-8 text-purple-600" />,
+      icon: <Bot className="w-8 h-8 text-purple-600" />,
       iconPodBg: "bg-purple-50 border-purple-200/60",
-      description: "End-to-end software solutions: Custom billing and CRM portals, 24/7 AI customer service chatbots, and cloud infrastructure.",
+      description: "Turn every website visitor into an immediate prospect with 24/7 autonomous WhatsApp bots and custom AI workflows trained on your business.",
       points: [
-        "Custom Billing, Invoicing, Staff & CRM Management Portals",
-        "24/7 WhatsApp & Website AI Customer Auto-Reply Chatbots",
-        "High-Availability Cloud Hosting & Domain SSL Setup",
-        "100% Complete Source Code & Database Ownership Handover",
+        "24/7 instant WhatsApp auto-replies in English and Hindi with zero delays",
+        "Smart lead qualification that alerts business owners on high-ticket leads",
+        "Custom AI agents trained on your pricing, services, and company FAQs",
+        "Automated CRM sync, lead logging, and customer inquiry routing",
       ],
-      link: "/services/enterprise-custom",
-      delivery: "2-4 Weeks Delivery",
-      capabilityNote: "Tailored to Your Workflow",
-      metric: "Zero Vendor Lock-in",
+      link: "/services/ai-solutions",
+      delivery: "1-2 Weeks Setup",
+      capabilityNote: "Zero Missed Leads",
+      metric: "24/7 Autonomous Ops",
+    },
+    {
+      id: "website-amc",
+      title: "Website AMC & Codebase Maintenance",
+      subtitle: "Full Hands-Off Management",
+      badge: "Enterprise SLA",
+      highlight: false,
+      icon: <ShieldCheck className="w-8 h-8 text-sky-600" />,
+      iconPodBg: "bg-sky-50 border-sky-200/60",
+      description: "Complete hands-off management for your web assets: ongoing bug fixes, security patches, framework upgrades, and guaranteed 99.9% uptime.",
+      points: [
+        "Ongoing monthly Website AMC (Annual Maintenance Contract)",
+        "Continuous bug fixing, code refactoring, and security vulnerability patching",
+        "Daily automated cloud backups and disaster recovery protocols",
+        "Priority technical support with guaranteed response times",
+      ],
+      link: "/services/maintenance-amc",
+      delivery: "Monthly Retainer",
+      capabilityNote: "99.9% Uptime Guarantee",
+      metric: "Zero Downtime Worry",
     },
   ];
 
@@ -74,17 +94,17 @@ export default function CoreOfferings() {
             <Sparkles className="w-3.5 h-3.5" /> High-End Engineering Capabilities
           </div>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#1d1d1f] mb-5 leading-tight font-heading">
-            Websites First, <br className="hidden sm:inline" />
-            <span className="apple-blue-gradient">Full Software Power</span>
+            New Builds, Legacy Modernization <br className="hidden sm:inline" />
+            <span className="apple-blue-gradient">& Global SEO Dominance</span>
           </h2>
           <p className="text-[#6e6e73] text-base sm:text-lg">
-            Delivering high-converting business websites — backed by full engineering capabilities for mobile applications, enterprise CRM systems, and AI automation.
+            We don't just build brand-new websites. We take over and fix old slow websites, dominate Google search across India & global markets, and automate customer inquiries 24/7.
           </p>
         </div>
 
-        {/* 3 Apple White Bento Box Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {offerings.map((item) => (
+        {/* 4 Apple White Bento Box Cards (2x2 Grid) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          {primaryOfferings.map((item) => (
             <div
               key={item.id}
               className={`apple-bento-card p-8 sm:p-9 flex flex-col justify-between ${
@@ -155,17 +175,50 @@ export default function CoreOfferings() {
           ))}
         </div>
 
+        {/* Secondary Capabilities Strip: Mobile Apps & Cloud Infrastructure */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          <div className="p-6 sm:p-7 rounded-3xl bg-white border border-black/8 shadow-2xs flex items-center justify-between gap-6 hover:border-[#0071e3]/30 transition-all">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-200">
+                <Smartphone className="w-6 h-6" />
+              </div>
+              <div>
+                <h4 className="text-base font-extrabold text-[#1d1d1f] font-heading">Mobile App Engineering (iOS & Android)</h4>
+                <p className="text-xs text-[#6e6e73]">Flutter & React Native cross-platform apps with UPI payments & OTP logins.</p>
+              </div>
+            </div>
+            <Link href="/services/mobile-apps" className="text-xs font-bold text-[#0071e3] shrink-0 hover:underline">
+              View Specs →
+            </Link>
+          </div>
+
+          <div className="p-6 sm:p-7 rounded-3xl bg-white border border-black/8 shadow-2xs flex items-center justify-between gap-6 hover:border-[#0071e3]/30 transition-all">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center shrink-0 border border-sky-200">
+                <Cloud className="w-6 h-6" />
+              </div>
+              <div>
+                <h4 className="text-base font-extrabold text-[#1d1d1f] font-heading">Cloud Infrastructure & DevOps SLA</h4>
+                <p className="text-xs text-[#6e6e73]">AWS, Vercel & Cloudflare Edge CDN deployment with 99.9% uptime guarantee.</p>
+              </div>
+            </div>
+            <Link href="/services/cloud-devops" className="text-xs font-bold text-[#0071e3] shrink-0 hover:underline">
+              View Specs →
+            </Link>
+          </div>
+        </div>
+
         {/* Apple Pro Executive Action Banner */}
         <div className="rounded-3xl bg-white p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-black/8 shadow-md">
           <div className="space-y-2 text-center md:text-left">
             <div className="inline-flex items-center gap-2 text-xs font-mono text-emerald-700 font-bold">
-              <ShieldCheck className="w-4 h-4 text-emerald-600" /> 100% Free Consultation • Free NDA Protected
+              <ShieldCheck className="w-4 h-4 text-emerald-600" /> Free Architecture & Website Speed Audit • NDA Protected
             </div>
             <h4 className="text-2xl sm:text-3xl font-extrabold text-[#1d1d1f] tracking-tight font-heading">
-              Ready to architect your high-converting business website or app?
+              Have an existing website or a brand-new project to discuss?
             </h4>
             <p className="text-sm text-[#6e6e73] max-w-xl">
-              Discuss your project scope directly with our engineering team for a comprehensive technical roadmap.
+              Get an instant code review, speed analysis, and SEO ranking breakdown from our senior engineering team.
             </p>
           </div>
           <div className="flex items-center gap-4 shrink-0">
@@ -173,7 +226,7 @@ export default function CoreOfferings() {
               href="#contact"
               className="apple-btn-black px-8 py-4 text-xs font-bold hover:scale-105 active:scale-95 shadow-md"
             >
-              Schedule Consultation
+              Get Free Technical Audit
             </a>
           </div>
         </div>

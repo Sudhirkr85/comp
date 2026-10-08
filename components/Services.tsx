@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Bot, Globe, Smartphone, Cloud, ShieldCheck, CheckCircle, ArrowUpRight, Sparkles } from "lucide-react";
+import { Bot, Globe, Smartphone, Cloud, ShieldCheck, CheckCircle, ArrowUpRight, Sparkles, TrendingUp } from "lucide-react";
 import { SERVICES_DATA, ServiceItem } from "@/data/companyData";
 
 export default function Services() {
@@ -15,15 +15,17 @@ export default function Services() {
   const getIcon = (name: string) => {
     switch (name) {
       case "Bot":
-        return <Bot className="w-6 h-6 text-[#0071e3]" />;
+        return <Bot className="w-6 h-6 text-purple-600" />;
       case "Globe":
-        return <Globe className="w-6 h-6 text-indigo-600" />;
+        return <Globe className="w-6 h-6 text-[#0071e3]" />;
+      case "TrendingUp":
+        return <TrendingUp className="w-6 h-6 text-emerald-600" />;
       case "Smartphone":
-        return <Smartphone className="w-6 h-6 text-emerald-600" />;
+        return <Smartphone className="w-6 h-6 text-blue-600" />;
       case "Cloud":
         return <Cloud className="w-6 h-6 text-sky-600" />;
       case "ShieldCheck":
-        return <ShieldCheck className="w-6 h-6 text-purple-600" />;
+        return <ShieldCheck className="w-6 h-6 text-indigo-600" />;
       default:
         return <Sparkles className="w-6 h-6 text-[#0071e3]" />;
     }
@@ -38,19 +40,20 @@ export default function Services() {
             <Sparkles className="w-3.5 h-3.5" /> Full Spectrum Engineering
           </div>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#1d1d1f] mb-4 font-heading">
-            Services Built for <span className="apple-blue-gradient">High Growth</span>
+            Engineering Services Built to <span className="apple-blue-gradient">Scale</span>
           </h2>
           <p className="text-[#6e6e73] text-base sm:text-lg">
-            From high-converting corporate websites to cross-platform mobile apps and custom enterprise automation.
+            From new enterprise builds and legacy speed overhauls to Pan-India & global SEO dominance, 24/7 AI bots, and ongoing Website AMC.
           </p>
         </div>
 
         {/* Category Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-14">
           {[
-            { id: "all", label: "All Services" },
-            { id: "ai", label: "AI & Automation" },
-            { id: "web", label: "Web & SaaS" },
+            { id: "all", label: "All Capabilities" },
+            { id: "web", label: "Web & SEO Dominance" },
+            { id: "enterprise", label: "Website AMC & Maintenance" },
+            { id: "ai", label: "AI & WhatsApp Bots" },
             { id: "mobile", label: "Mobile Apps" },
             { id: "cloud", label: "Cloud & DevOps" },
           ].map((tab) => (
@@ -74,7 +77,7 @@ export default function Services() {
             <Link
               key={service.id}
               href={`/services/${service.id}`}
-              className="apple-bento-card p-8 flex flex-col justify-between relative group cursor-pointer block bg-white"
+              className="apple-bento-card p-8 flex flex-col justify-between relative group cursor-pointer block bg-white hover:border-[#0071e3]/40"
             >
               <div>
                 {/* Header Icon & Tag */}

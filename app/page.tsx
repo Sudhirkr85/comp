@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import TechMarquee from "@/components/TechMarquee";
 import CoreOfferings from "@/components/CoreOfferings";
+import AuditTool from "@/components/AuditTool";
 import RegionalTrust from "@/components/RegionalTrust";
 import Services from "@/components/Services";
 import DevelopmentProcess from "@/components/DevelopmentProcess";
@@ -18,28 +20,34 @@ export default function Home() {
       {/* 1. Apple White Keynote Hero */}
       <Hero />
       
-      {/* 2. Apple White Bento Box Core Offerings: Websites, Mobile Apps, Full Software */}
+      {/* 2. Enterprise Tech Stack & Standards Marquee Ticker */}
+      <TechMarquee />
+
+      {/* 3. Apple White Bento Box Core Offerings: New Builds, Modernization, Global SEO, AI */}
       <CoreOfferings />
 
-      {/* 3. Regional Trust: Targets Delhi NCR, UP, Bihar, MP, Rajasthan searchers */}
+      {/* 4. Instant 60-Second Website Speed & SEO Audit Tool */}
+      <AuditTool />
+
+      {/* 5. Regional & Global Trust: Targets Delhi NCR, UP, Bihar, MP & International Markets */}
       <RegionalTrust />
 
-      {/* 4. Complete Services Matrix */}
+      {/* 6. Complete Services Matrix (6 Capabilities) */}
       <Services />
 
-      {/* 5. Enterprise Engineering Workflow & Delivery Methodology */}
+      {/* 7. Enterprise Engineering Workflow & Delivery Methodology */}
       <DevelopmentProcess />
 
-      {/* 6. Proven Client Results & Case Studies */}
+      {/* 8. Proven Client Results & Case Studies */}
       <Portfolio />
 
-      {/* 7. Why Founders Choose SA Software Innovation & FAQs */}
+      {/* 9. Why Founders Choose SA Software Innovation & FAQs */}
       <WhyUs />
 
-      {/* 8. Direct Lead Capture Contact Form + Instant WhatsApp option */}
+      {/* 10. Direct Lead Capture Contact Form + Instant WhatsApp option */}
       <ContactForm />
 
-      {/* 9. Apple Glass Floating Dynamic Island Contact Pill */}
+      {/* 11. Apple Glass Floating Dynamic Island Contact Pill */}
       <FloatingContactDock />
 
       <Footer />
