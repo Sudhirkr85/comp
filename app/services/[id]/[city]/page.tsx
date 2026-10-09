@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Service Location Not Found" };
   }
 
-  const pageUrl = `https://sasoftwareinnovation.com/services/${service.id}/${location.slug}`;
+  const pageUrl = `https://sasoftwareinnovation.in/services/${service.id}/${location.slug}`;
   const title = `${service.title} in ${location.name} | ${COMPANY_INFO.name}`;
   const description = `Top-rated ${service.title.toLowerCase()} in ${location.name}, ${location.state}. Sub-second Next.js web applications, mobile apps, 24/7 AI WhatsApp automation, and 100% source code ownership. Call: ${COMPANY_INFO.rawPhone}.`;
 
@@ -97,7 +97,7 @@ export default async function ProgrammaticServiceLocationPage({ params }: Props)
     notFound();
   }
 
-  const pageUrl = `https://sasoftwareinnovation.com/services/${service.id}/${location.slug}`;
+  const pageUrl = `https://sasoftwareinnovation.in/services/${service.id}/${location.slug}`;
 
   // Nearby locations in the same state/region for rich internal linking
   const nearbyLocations = PROGRAMMATIC_LOCATIONS.filter(
@@ -138,7 +138,7 @@ export default async function ProgrammaticServiceLocationPage({ params }: Props)
         "provider": {
           "@type": "Organization",
           "name": COMPANY_INFO.name,
-          "url": "https://sasoftwareinnovation.com"
+          "url": "https://sasoftwareinnovation.in"
         },
         "areaServed": `${location.name}, ${location.state}`
       },
@@ -149,13 +149,13 @@ export default async function ProgrammaticServiceLocationPage({ params }: Props)
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://sasoftwareinnovation.com"
+            "item": "https://sasoftwareinnovation.in"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": service.title,
-            "item": `https://sasoftwareinnovation.com/services/${service.id}`
+            "item": `https://sasoftwareinnovation.in/services/${service.id}`
           },
           {
             "@type": "ListItem",

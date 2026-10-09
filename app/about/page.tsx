@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: `About Us — ${COMPANY_INFO.name}`,
   description: `Learn about ${COMPANY_INFO.name}. We engineer high-performance web applications, legacy website modernizations, cross-border Google SEO, and intelligent AI automation for startups and enterprises worldwide.`,
   alternates: {
-    canonical: "https://sasoftwareinnovation.com/about",
+    canonical: "https://sasoftwareinnovation.in/about",
   },
   openGraph: {
     title: `About Us — ${COMPANY_INFO.name}`,
     description: "Our engineering culture, legacy modernization expertise, and startup speed delivery.",
-    url: "https://sasoftwareinnovation.com/about",
+    url: "https://sasoftwareinnovation.in/about",
   },
 };
 
@@ -24,20 +24,20 @@ export default function AboutPage() {
     "@graph": [
       {
         "@type": "AboutPage",
-        "@id": "https://sasoftwareinnovation.com/about#webpage",
-        "url": "https://sasoftwareinnovation.com/about",
+        "@id": "https://sasoftwareinnovation.in/about#webpage",
+        "url": "https://sasoftwareinnovation.in/about",
         "name": `About ${COMPANY_INFO.name}`,
         "description": COMPANY_INFO.tagline,
         "isPartOf": {
           "@type": "WebSite",
-          "@id": "https://sasoftwareinnovation.com/#website",
+          "@id": "https://sasoftwareinnovation.in/#website",
           "name": COMPANY_INFO.name,
-          "url": "https://sasoftwareinnovation.com"
+          "url": "https://sasoftwareinnovation.in"
         },
         "publisher": {
           "@type": "Organization",
           "name": COMPANY_INFO.name,
-          "url": "https://sasoftwareinnovation.com"
+          "url": "https://sasoftwareinnovation.in"
         }
       },
       {
@@ -47,13 +47,13 @@ export default function AboutPage() {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://sasoftwareinnovation.com"
+            "item": "https://sasoftwareinnovation.in"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "About Us",
-            "item": "https://sasoftwareinnovation.com/about"
+            "item": "https://sasoftwareinnovation.in/about"
           }
         ]
       }

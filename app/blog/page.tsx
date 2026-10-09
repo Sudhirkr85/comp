@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: `Tech Insights & Engineering Blog | ${COMPANY_INFO.name}`,
   description: `Read technical articles on AI RAG pipelines, Next.js web performance, mobile engineering, and cloud architecture by ${COMPANY_INFO.name} engineers.`,
   alternates: {
-    canonical: "https://sasoftwareinnovation.com/blog",
+    canonical: "https://sasoftwareinnovation.in/blog",
   },
   openGraph: {
     title: `Tech Insights & Blog — ${COMPANY_INFO.name}`,
     description: "In-depth engineering guides, AI architecture breakdowns, and SaaS MVP strategies.",
-    url: "https://sasoftwareinnovation.com/blog",
+    url: "https://sasoftwareinnovation.in/blog",
   },
 };
 
@@ -25,15 +25,15 @@ export default function BlogListingPage() {
     "@graph": [
       {
         "@type": "CollectionPage",
-        "@id": "https://sasoftwareinnovation.com/blog#webpage",
-        "url": "https://sasoftwareinnovation.com/blog",
+        "@id": "https://sasoftwareinnovation.in/blog#webpage",
+        "url": "https://sasoftwareinnovation.in/blog",
         "name": `Tech Insights & Engineering Blog — ${COMPANY_INFO.name}`,
         "description": "In-depth engineering guides, AI architecture breakdowns, and SaaS MVP strategies.",
         "isPartOf": {
           "@type": "WebSite",
-          "@id": "https://sasoftwareinnovation.com/#website",
+          "@id": "https://sasoftwareinnovation.in/#website",
           "name": COMPANY_INFO.name,
-          "url": "https://sasoftwareinnovation.com"
+          "url": "https://sasoftwareinnovation.in"
         }
       },
       {
@@ -43,13 +43,13 @@ export default function BlogListingPage() {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://sasoftwareinnovation.com"
+            "item": "https://sasoftwareinnovation.in"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Blog",
-            "item": "https://sasoftwareinnovation.com/blog"
+            "item": "https://sasoftwareinnovation.in/blog"
           }
         ]
       }

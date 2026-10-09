@@ -31,12 +31,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: service.description,
     keywords: [service.title, ...service.techBadge, COMPANY_INFO.name, "Software Development"],
     alternates: {
-      canonical: `https://sasoftwareinnovation.com/services/${service.id}`,
+      canonical: `https://sasoftwareinnovation.in/services/${service.id}`,
     },
     openGraph: {
       title: `${service.title} — ${COMPANY_INFO.name}`,
       description: service.description,
-      url: `https://sasoftwareinnovation.com/services/${service.id}`,
+      url: `https://sasoftwareinnovation.in/services/${service.id}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -77,16 +77,16 @@ export default async function ServiceDetailPage({ params }: Props) {
     "@graph": [
       {
         "@type": "Service",
-        "@id": `https://sasoftwareinnovation.com/services/${service.id}#service`,
+        "@id": `https://sasoftwareinnovation.in/services/${service.id}#service`,
         "name": service.title,
         "description": service.description,
         "provider": {
           "@type": "Organization",
           "name": COMPANY_INFO.name,
-          "url": "https://sasoftwareinnovation.com",
+          "url": "https://sasoftwareinnovation.in",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://sasoftwareinnovation.com/logo.svg"
+            "url": "https://sasoftwareinnovation.in/logo.svg"
           }
         },
         "areaServed": [
@@ -110,19 +110,19 @@ export default async function ServiceDetailPage({ params }: Props) {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://sasoftwareinnovation.com"
+            "item": "https://sasoftwareinnovation.in"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Services",
-            "item": "https://sasoftwareinnovation.com/#services"
+            "item": "https://sasoftwareinnovation.in/#services"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": service.title,
-            "item": `https://sasoftwareinnovation.com/services/${service.id}`
+            "item": `https://sasoftwareinnovation.in/services/${service.id}`
           }
         ]
       }

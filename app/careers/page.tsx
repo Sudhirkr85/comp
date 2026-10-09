@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: `Careers at ${COMPANY_INFO.name} — Join Our Engineering Team`,
   description: `Explore career opportunities at ${COMPANY_INFO.name}. We are hiring Full-Stack Developers, AI Engineers, and UI/UX Designers to build next-generation software products.`,
   alternates: {
-    canonical: "https://sasoftwareinnovation.com/careers",
+    canonical: "https://sasoftwareinnovation.in/careers",
   },
   openGraph: {
     title: `Careers at ${COMPANY_INFO.name}`,
     description: "Build cutting-edge AI products and full-stack web applications with our remote-first team.",
-    url: "https://sasoftwareinnovation.com/careers",
+    url: "https://sasoftwareinnovation.in/careers",
   },
 };
 
@@ -63,15 +63,15 @@ export default function CareersPage() {
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://sasoftwareinnovation.com/careers#webpage",
-        "url": "https://sasoftwareinnovation.com/careers",
+        "@id": "https://sasoftwareinnovation.in/careers#webpage",
+        "url": "https://sasoftwareinnovation.in/careers",
         "name": `Careers at ${COMPANY_INFO.name}`,
         "description": "Explore remote engineering and AI careers at SA Software Innovation.",
         "isPartOf": {
           "@type": "WebSite",
-          "@id": "https://sasoftwareinnovation.com/#website",
+          "@id": "https://sasoftwareinnovation.in/#website",
           "name": COMPANY_INFO.name,
-          "url": "https://sasoftwareinnovation.com"
+          "url": "https://sasoftwareinnovation.in"
         }
       },
       {
@@ -81,13 +81,13 @@ export default function CareersPage() {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://sasoftwareinnovation.com"
+            "item": "https://sasoftwareinnovation.in"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Careers",
-            "item": "https://sasoftwareinnovation.com/careers"
+            "item": "https://sasoftwareinnovation.in/careers"
           }
         ]
       }

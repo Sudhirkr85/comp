@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: post.excerpt,
     keywords: [...post.tags, COMPANY_INFO.name, "Tech Blog", "Software Engineering"],
     alternates: {
-      canonical: `https://sasoftwareinnovation.com/blog/${post.slug}`,
+      canonical: `https://sasoftwareinnovation.in/blog/${post.slug}`,
     },
     openGraph: {
       title: post.title,
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: post.publishedDate,
       authors: [post.author],
-      url: `https://sasoftwareinnovation.com/blog/${post.slug}`,
+      url: `https://sasoftwareinnovation.in/blog/${post.slug}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -62,25 +62,25 @@ export default async function BlogPostPage({ params }: Props) {
     "@graph": [
       {
         "@type": "TechArticle",
-        "@id": `https://sasoftwareinnovation.com/blog/${post.slug}#article`,
+        "@id": `https://sasoftwareinnovation.in/blog/${post.slug}#article`,
         "headline": post.title,
         "description": post.excerpt,
         "author": {
           "@type": "Organization",
           "name": COMPANY_INFO.name,
-          "url": "https://sasoftwareinnovation.com"
+          "url": "https://sasoftwareinnovation.in"
         },
         "publisher": {
           "@type": "Organization",
           "name": COMPANY_INFO.name,
-          "url": "https://sasoftwareinnovation.com",
+          "url": "https://sasoftwareinnovation.in",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://sasoftwareinnovation.com/logo.svg"
+            "url": "https://sasoftwareinnovation.in/logo.svg"
           }
         },
         "datePublished": post.publishedDate,
-        "mainEntityOfPage": `https://sasoftwareinnovation.com/blog/${post.slug}`
+        "mainEntityOfPage": `https://sasoftwareinnovation.in/blog/${post.slug}`
       },
       {
         "@type": "BreadcrumbList",
@@ -89,19 +89,19 @@ export default async function BlogPostPage({ params }: Props) {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://sasoftwareinnovation.com"
+            "item": "https://sasoftwareinnovation.in"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Blog",
-            "item": "https://sasoftwareinnovation.com/blog"
+            "item": "https://sasoftwareinnovation.in/blog"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": post.title,
-            "item": `https://sasoftwareinnovation.com/blog/${post.slug}`
+            "item": `https://sasoftwareinnovation.in/blog/${post.slug}`
           }
         ]
       }

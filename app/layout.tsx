@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sasoftwareinnovation.com"),
+  metadataBase: new URL("https://sasoftwareinnovation.in"),
   title: {
     default: "SA Software Innovation — Global Web Engineering, Legacy Modernization & Cross-Border SEO",
     template: "%s | SA Software Innovation"
@@ -59,12 +59,12 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://sasoftwareinnovation.com",
+    canonical: "https://sasoftwareinnovation.in",
   },
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://sasoftwareinnovation.com",
+    url: "https://sasoftwareinnovation.in",
     title: "SA Software Innovation — Global Web Engineering, Modernization & Cross-Border SEO",
     description: "Launch your custom business website or mobile app in 2-4 weeks. Enterprise architecture, legacy speed overhauls, 100% code ownership. Serving North America, Europe, UAE, and India.",
     siteName: "SA Software Innovation",
@@ -86,15 +86,15 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "LocalBusiness",
-        "@id": "https://sasoftwareinnovation.com/#organization",
+        "@id": "https://sasoftwareinnovation.in/#organization",
         "name": COMPANY_INFO.name,
         "alternateName": ["SA Innovation", "SA Software", "SA Web Development"],
         "slogan": COMPANY_INFO.motto,
-        "url": "https://sasoftwareinnovation.com",
+        "url": "https://sasoftwareinnovation.in",
         "email": COMPANY_INFO.contactEmail,
         "telephone": COMPANY_INFO.phone,
         "priceRange": "$$",
-        "image": "https://sasoftwareinnovation.com/logo.svg",
+        "image": "https://sasoftwareinnovation.in/logo.svg",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "M-24, Ground Floor, Near SBI Bank, Old DLF Colony, Sector 14",
@@ -132,7 +132,7 @@ export default function RootLayout({
         "@type": "Service",
         "name": "Custom Business Website & Mobile App Development",
         "provider": {
-          "@id": "https://sasoftwareinnovation.com/#organization"
+          "@id": "https://sasoftwareinnovation.in/#organization"
         },
         "serviceType": "Website Design & Mobile App Development",
         "areaServed": "India",

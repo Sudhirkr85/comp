@@ -5,7 +5,7 @@ import { LOCATIONS_DATA } from '@/data/locationsData';
 import { PROGRAMMATIC_LOCATIONS } from '@/data/indiaLocations';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://sasoftwareinnovation.com';
+  const baseUrl = 'https://sasoftwareinnovation.in';
 
   const locationUrls = LOCATIONS_DATA.map((loc) => ({
     url: `${baseUrl}/locations/${loc.id}`,

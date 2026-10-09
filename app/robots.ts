@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://sasoftwareinnovation.com/sitemap.xml',
+    sitemap: 'https://sasoftwareinnovation.in/sitemap.xml',
   };
 }

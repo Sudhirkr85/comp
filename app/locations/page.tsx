@@ -22,12 +22,12 @@ export const metadata: Metadata = {
   title: `Global Delivery Hubs & Local Regional Offices | ${COMPANY_INFO.name}`,
   description: "Explore our physical offline engineering office at M-24 Sector 14 Gurugram, Delhi NCR hubs, and commercial delivery centers across India, North America, Europe, and UAE.",
   alternates: {
-    canonical: "https://sasoftwareinnovation.com/locations",
+    canonical: "https://sasoftwareinnovation.in/locations",
   },
   openGraph: {
     title: `Regional Hubs & Engineering Centers — ${COMPANY_INFO.name}`,
     description: "Sub-second Next.js web applications, legacy website speed overhauls, and 24/7 AI automation across India and global markets.",
-    url: "https://sasoftwareinnovation.com/locations",
+    url: "https://sasoftwareinnovation.in/locations",
   },
 };
 
@@ -37,15 +37,15 @@ export default function LocationsIndexPage() {
     "@graph": [
       {
         "@type": "CollectionPage",
-        "@id": "https://sasoftwareinnovation.com/locations#webpage",
-        "url": "https://sasoftwareinnovation.com/locations",
+        "@id": "https://sasoftwareinnovation.in/locations#webpage",
+        "url": "https://sasoftwareinnovation.in/locations",
         "name": `Global Hubs & Regional Centers — ${COMPANY_INFO.name}`,
         "description": "Directory of engineering delivery centers and local hubs.",
         "isPartOf": {
           "@type": "WebSite",
-          "@id": "https://sasoftwareinnovation.com/#website",
+          "@id": "https://sasoftwareinnovation.in/#website",
           "name": COMPANY_INFO.name,
-          "url": "https://sasoftwareinnovation.com"
+          "url": "https://sasoftwareinnovation.in"
         }
       },
       {
@@ -55,13 +55,13 @@ export default function LocationsIndexPage() {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://sasoftwareinnovation.com"
+            "item": "https://sasoftwareinnovation.in"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Locations",
-            "item": "https://sasoftwareinnovation.com/locations"
+            "item": "https://sasoftwareinnovation.in/locations"
           }
         ]
       }

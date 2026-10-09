@@ -42,6 +42,7 @@ export const COMPANY_INFO = {
   state: "Haryana",
   pincode: "122001",
   country: "India",
+  siteUrl: "https://sasoftwareinnovation.in",
   ndaGuaranteed: true,
   mvpDeliveryTime: "2-4 Weeks",
 };

@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Location Not Found" };
   }
 
-  const pageUrl = `https://sasoftwareinnovation.com/locations/${location.id}`;
+  const pageUrl = `https://sasoftwareinnovation.in/locations/${location.id}`;
 
   return {
     title: location.metaTitle,
@@ -80,7 +80,7 @@ export default async function LocationDetailPage({ params }: Props) {
     notFound();
   }
 
-  const pageUrl = `https://sasoftwareinnovation.com/locations/${location.id}`;
+  const pageUrl = `https://sasoftwareinnovation.in/locations/${location.id}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -120,13 +120,13 @@ export default async function LocationDetailPage({ params }: Props) {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://sasoftwareinnovation.com"
+            "item": "https://sasoftwareinnovation.in"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Global Hubs",
-            "item": "https://sasoftwareinnovation.com/#regional"
+            "item": "https://sasoftwareinnovation.in/#regional"
           },
           {
             "@type": "ListItem",
